@@ -1,3 +1,192 @@
-html, body {
-
+// FONTS
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/MinionPro-BoldCn.woff2') format('woff2'),
+        url('fonts/MinionPro-BoldCn.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-CondensedBlack.woff2') format('woff2'),
+        url('fonts/HelveticaNeue-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/MinionPro-Medium.woff2') format('woff2'),
+        url('fonts/MinionPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/MinionPro-Regular.woff2') format('woff2'),
+        url('fonts/MinionPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    display: block;
+    margin: 0;
+    #logo {
+        width: 200px;
+        // height: 50px;
+    }
+    #navbarVisible {
+        z-index: 5000;
+    }
+    #navbarCollapse {
+        transform: translateY(-100vh);
+        height: calc(100vh - 58px);
+        transition: all 426ms cubic-bezier(.4,.9,.3,1);
+    }
+    header {
+        a {
+            font-family: 'Minion Pro';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24;
+            color: #fff;            
+        }
+        button {
+            border: none;
+            background: none;
+            color: #fff;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    nav {
+        background: hsl(230,60,60%);
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style-type: none;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    #welcome-section {
+        h1 {
+            font-family: 'Minion Pro';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 56;
+            color: hsl(0,0,88%);
+        }
+    }
+}
+
+// BUTTONS
+.c-button-dark-sm {
+    text-decoration: none;
+    background: rgb(0,0,0);
+    color: rgb(255,255,255);
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(255,255,255)!important;
+    transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background:  rgba(0,0,0,0.65);
+      color: rgba(255,255,255,0.65);
+      border-color: rgba(255,255,255,0.65)!important;
+      transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  
+.c-button-light-sm {
+    text-decoration: none;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    border-width: thin;
+    border-color: rgb(0,0,0)!important;
+    transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background: rgba(255,255,255,0.65);
+      color:  rgba(0,0,0,0.65)!important;
+      border-color:  rgba(0,0,0,0.65)!important;
+      transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  
+.c-button-light-md {
+    text-decoration: none;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(0,0,0)!important;
+    transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background: rgb(0,0,0)!important;
+      color:  rgb(255,255,255)!important;
+      border-color: rgb(255,255,255)!important;
+      transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  
+.c-button-dark-md {
+    text-decoration: none;
+    background: rgb(0,0,0);
+    color: rgb(255,255,255);
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(255,255,255)!important;
+    transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background: rgb(255,255,255)!important;
+      color: rgb(0,0,0)!important;
+      border-color: rgb(0,0,0);
+      transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  
+.c-button-blue-md {
+    text-decoration: none;
+    background: rgb(73, 176, 217);
+    color: rgb(255,255,255);
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(255,255,255)!important;
+    transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background: rgb(255,255,255)!important;
+      color: rgb(73, 176, 217)!important;
+      border-color: rgb(73, 176, 217);
+      transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  
+.c-button-blue-inverse-md {
+    text-decoration: none;
+    background: rgb(255,255,255);
+    color: rgb(73, 176, 217);
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(73, 176, 217)!important;
+    transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  
+    &:hover {
+      background: rgb(73, 176, 217)!important;
+      color:  rgb(255,255,255)!important;
+      border-color: rgb(255,255,255)!important;
+      transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+  

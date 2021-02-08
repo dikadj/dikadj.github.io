@@ -9830,6 +9830,11 @@ resolve@1.18.1, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.14
     is-core-module "^2.0.0"
     path-parse "^1.0.6"
 
+responsive-nav@^1.0.39:
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/responsive-nav/-/responsive-nav-1.0.39.tgz#ce64753847d0093ea746161c5bb686927a713c10"
+  integrity sha1-zmR1OEfQCT6nRhYcW7aGknpxPBA=
+
 restore-cursor@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-3.1.0.tgz#39f67c54b3a7a58cea5236d95cf0034239631f7e"
