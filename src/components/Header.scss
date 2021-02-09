@@ -6,14 +6,15 @@
 
 }
 #navbarCollapse {
-    transform: translateY(-100vh); // move #navvbarCollapse off screen
+    top: -100vh;
+    // transform: translateY(-100vh); // move #navvbarCollapse off screen
     height: calc(100vh - 58px);
     transition: all 426ms cubic-bezier(.4,.9,.3,1);
 }
 header {
     z-index: 9999; // to put header on top of everything
     a {
-        color: #fff;            
+        color: #fff;
     }
     button {
         border: none;

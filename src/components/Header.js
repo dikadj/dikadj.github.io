@@ -5,6 +5,9 @@ import "./Header.scss"
 
 // HEADER FUNCTIONS
 $(document).ready(() => {
+  const navbarVisibleHeight = $("#navbarVisible").innerHeight()
+  const navbarCollapseHeight = $("#navbarCollapse").innerHeight()
+  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
   function setOpacTransformAndBtnText(opacity, translateY, buttonText) {
     $("#navbarCollapse").css({ 
       opacity: opacity,
@@ -13,21 +16,21 @@ $(document).ready(() => {
     $("button#navToggle").text(buttonText) 
   }
   function collapseTheNavbar(isOpacityOne, navbarVisibleHeight, navbarCollapseHeight) {
-    if (isOpacityOne) {
-      setOpacTransformAndBtnText(0, `${-(navbarVisibleHeight + navbarCollapseHeight)}px`, "☰")
+    if (!isOpacityOne) {
+      setOpacTransformAndBtnText(1, (vh + navbarVisibleHeight + "px"), "✕")
     } else {
-      setOpacTransformAndBtnText(1, 0, "✕")
+      setOpacTransformAndBtnText(0, 0, "☰")
     }
   }
-  const navbarVisibleHeight = $("#navbarVisible").innerHeight()
-  const navbarCollapseHeight = $("#navbarCollapse").innerHeight()
   $("button#navToggle").on("click", () => {
     const isOpacityOne = $("#navbarCollapse").css("opacity") == 1 // check whether navbarCollapse is visible
     collapseTheNavbar(isOpacityOne, navbarVisibleHeight, navbarCollapseHeight)
   })
-  $("button#navToggle").on("focus", () => {
-    setOpacTransformAndBtnText(1, 0, "✕")
-  })
+  // I removed onFocus bcs it causes hidden navbar to keep popping up
+  // everytime I switched to the app's existing tab
+  // $("button#navToggle").on("focus", () => {
+  //   setOpacTransformAndBtnText(1, vh+navbarVisibleHeight+"px", "✕")
+  // })
   // $("button#navToggle").on("blur", () => {
   //   setOpacTransformAndBtnText(0, -(navbarVisibleHeight + navbarCollapseHeight), "☰")
   // })

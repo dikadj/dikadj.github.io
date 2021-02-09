@@ -25,14 +25,7 @@
   //   font-family: 'Lato', sans-serif;
   // }
   .card-content {
-    background: hsla(0,0%,0%,.15);
-    transition: all 426ms cubic-bezier(.4,.9,.3,1);
-  }
-  &:hover, &:focus {
-    .card-content {
-      background: hsla(0,0%,0%,.5);
-      transition: all 426ms cubic-bezier(.4,.9,.3,1);
-    }
+    background: hsla(0,0%,0%,.5);
   }
   a, button {
     text-decoration: none;
@@ -56,6 +49,10 @@
 @media screen and (min-width: 768px) { // ONLY ON LARGER SCREEN
   .zoom-on-hover {
     &:hover, &:focus {
+      .card-content {
+        background: hsla(0,0%,0%,.9);
+        transition: all 426ms cubic-bezier(.4,.9,.3,1);
+      }
       .card-bg {
         transform: scale(1.15, 1.15);
         transition: transform 426ms cubic-bezier(.4,.9,.3,1);
@@ -65,7 +62,14 @@
         filter: opacity(100%);
         transition: transform 426ms cubic-bezier(.4,.9,.3,1), filter 426ms cubic-bezier(.4,.9,.3,1);
       }
+      p {
+        // background: hsla(0,0%,0%,.8);
+      }
     }
+    .card-content {
+      background: hsla(0,0%,0%,.4);
+      transition: all 426ms cubic-bezier(.4,.9,.3,1);
+    }  
     .card-bg {
       transform: scale(1, 1);
       transition: transform 426ms cubic-bezier(.4,.9,.3,1);
