@@ -4,12 +4,25 @@ import $ from "jquery"
 // import "animate.css"
 import Header from "./components/Header"
 import Welcome from "./components/Welcome"
+import ProjectTiles from "./components/Cards"
 import './App.scss'
 
 const Projects = () => (
   <section id="projects" className="">
-    <div className="project-tile">
-      <a href="https://dikadj.github.io/converse-landing-redesign/">Link to a project</a>
+    <div className="project-container container-fluid">
+      <div className="row">
+        <div className="project-header col-12 col-md-3 p-4 d-flex justify-content-center align-items-center">
+          <h1 className="mb-0 w-50">THINGS I'VE BUILT</h1>
+        </div>
+        {/* <div className="project-tile">
+          <a href="https://dikadj.github.io/converse-landing-redesign/">Link to a project</a>
+        </div> */}
+        <div className="col-12 col-md-9">
+          <div className="row">
+            <ProjectTiles className="project-tile" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 )

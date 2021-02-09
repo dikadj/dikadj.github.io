@@ -44,10 +44,37 @@ header a, #welcome-section a {
     font-style: normal;
     font-size: 56;
 }
+#projects {
+    h1 {
+        font-family: 'Helvetica Neue';
+        font-weight: 900;
+        font-style: normal;
+        font-size: 56;
+    }
+    h3 {
+        font-family: 'Minion Pro';
+        font-weight: bold;
+        font-style: normal;
+    }
+    p {
+        font-family: 'Minion Pro';
+        font-weight: normal;
+        font-style: normal;    
+    }
+}
 
 html, body {
     display: block;
     margin: 0;
+    #projects {
+        .project-header {
+            background: hsl(0,0%,15%);
+            color: hsl(0,0%,88%);
+        }
+        .card-bg-holder {
+            height: calc((100vh - 64px)/3);
+        }
+    }
 }
 
 // BUTTONS  
@@ -56,7 +83,7 @@ html, body {
     background: hsl(230,60,60%);
     color: hsl(0,0,100%);
     transition: all 426ms cubic-bezier(.4,.9,.3,1);
-    &:hover {
+    &:hover, &:focus {
       background: hsl(0,0,100%)!important;
       color: hsl(230,60,60%)!important;
       transition: all 426ms cubic-bezier(.4,.9,.3,1);
