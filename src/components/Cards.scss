@@ -17,7 +17,7 @@
 // }
 
 // Cards
-.zoom-on-hover {
+.card-container {
   // h3 {
   //   font-family: 'Open Sans', sans-serif;
   // }
@@ -47,7 +47,7 @@
   }
 }
 @media screen and (min-width: 768px) { // ONLY ON LARGER SCREEN
-  .zoom-on-hover {
+  .card-container {
     &:hover, &:focus {
       .card-content {
         background: hsla(0,0%,0%,.9);

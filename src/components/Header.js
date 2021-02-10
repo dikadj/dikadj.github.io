@@ -15,7 +15,7 @@ $(document).ready(() => {
     })
     $("button#navToggle").text(buttonText) 
   }
-  function collapseTheNavbar(isOpacityOne, navbarVisibleHeight, navbarCollapseHeight) {
+  function collapseTheNavbar(isOpacityOne) {
     if (!isOpacityOne) {
       setOpacTransformAndBtnText(1, (vh + navbarVisibleHeight + "px"), "✕")
     } else {
@@ -24,7 +24,7 @@ $(document).ready(() => {
   }
   $("button#navToggle").on("click", () => {
     const isOpacityOne = $("#navbarCollapse").css("opacity") == 1 // check whether navbarCollapse is visible
-    collapseTheNavbar(isOpacityOne, navbarVisibleHeight, navbarCollapseHeight)
+    collapseTheNavbar(isOpacityOne)
   })
   // I removed onFocus bcs it causes hidden navbar to keep popping up
   // everytime I switched to the app's existing tab

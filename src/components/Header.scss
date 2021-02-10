@@ -7,6 +7,8 @@
 }
 #navbarCollapse {
     top: -100vh;
+    opacity: 0;
+    transform: translateY(0px);
     // transform: translateY(-100vh); // move #navvbarCollapse off screen
     height: calc(100vh - 58px);
     transition: all 426ms cubic-bezier(.4,.9,.3,1);

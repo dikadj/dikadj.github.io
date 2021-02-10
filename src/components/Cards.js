@@ -46,12 +46,10 @@ const items = [
   },
 ];
 
-const Card = ({ title, copy, img, cardClassName }) => (
+const Card = ({ id, title, copy, img, cardClassName, cardStyle }) => (
   <div
-    className={`zoom-on-hover position-relative text-wrap col-12 col-md-6 col-lg-4 px-0 d-flex flex-column justify-content-center align-items-center ${cardClassName}`}
-    style={{
-      color: "#fff"
-    }}
+    className={`card-container position-relative text-wrap px-0 d-flex flex-column justify-content-center align-items-center ${cardClassName}`}
+    style={{ ...cardStyle, color: "#fff" }}
   >
     <div className="card-bg-holder w-100 overflow-hidden">
       <div
@@ -72,10 +70,11 @@ const Card = ({ title, copy, img, cardClassName }) => (
 const Cards = ({ className }) => {
   return items.map((card) => (
     <Card
+      id={card.id}
       title={card.title}
       copy={card.copy}
       img={card.img}
-      cardClassName={`card-item-${card.id + 1} ${className}`}
+      cardClassName={`card-item-${card.id + 1} ${className} col-12 col-md-6 col-lg-4`}
     />
   ));
 };
