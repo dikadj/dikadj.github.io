@@ -1,52 +1,22 @@
-import React from "react"
+import React, { Component } from "react"
 import $ from "jquery"
 import logo from "./../svg/logo.svg"
 import "./Header.scss"
-
-// HEADER FUNCTIONS
-$(document).ready(() => {
-  const navbarVisibleHeight = $("#navbarVisible").innerHeight()
-  const navbarCollapseHeight = $("#navbarCollapse").innerHeight()
-  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-  function setOpacTransformAndBtnText(opacity, translateY, buttonText) {
-    $("#navbarCollapse").css({ 
-      opacity: opacity,
-      transform: `translateY(${translateY})`, // move #navbarCollapse off screen
-    })
-    $("button#navToggle").text(buttonText) 
-  }
-  function collapseTheNavbar(isOpacityOne) {
-    if (!isOpacityOne) {
-      setOpacTransformAndBtnText(1, (vh + navbarVisibleHeight + "px"), "✕")
-    } else {
-      setOpacTransformAndBtnText(0, 0, "☰")
-    }
-  }
-  $("button#navToggle").on("click", () => {
-    const isOpacityOne = $("#navbarCollapse").css("opacity") == 1 // check whether navbarCollapse is visible
-    collapseTheNavbar(isOpacityOne)
-  })
-  // I removed onFocus bcs it causes hidden navbar to keep popping up
-  // everytime I switched to the app's existing tab
-  // $("button#navToggle").on("focus", () => {
-  //   setOpacTransformAndBtnText(1, vh+navbarVisibleHeight+"px", "✕")
-  // })
-  // $("button#navToggle").on("blur", () => {
-  //   setOpacTransformAndBtnText(0, -(navbarVisibleHeight + navbarCollapseHeight), "☰")
-  // })
-})
   
 // HEADER VIEW (PRESENTATIONAL) TEMPLATE
-const Header = () => (
+const HeaderView = ({ onNavToggleClick }) => (
   <header  id="navbar" className="position-fixed w-100 h-auto">
-    <nav id="navbarVisible" className="d-flex flex-column">
+    <nav id="navbarVisible" className="d-flex flex-column position-relative">
       <div className="d-flex justify-content-between">
         <div id="logo" className="m-3">
           <a className="" href="/">
             <img src={logo} alt="Logo" />
           </a>
         </div>
-        <button type="button" id="navToggle" className="m-3">☰</button>
+        <button onClick={onNavToggleClick} type="button" 
+          id="navToggle" 
+          className="m-3"
+        >☰</button>
       </div>
     </nav>
     <nav id="navbarCollapse" className="position-absolute w-100 d-flex align-items-center justify-content-center">
@@ -59,5 +29,35 @@ const Header = () => (
     </nav>
   </header>
 )
+
+export default class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.onNavToggleClick = this.onNavToggleClick.bind(this)
+  }
+  onNavToggleClick() {
+    const navbarCollapse = $("#navbarCollapse")
+    const navToggle = $("#navToggle")
+    const x = navbarCollapse.css("transform").split(",") // just to make it shorter
+    const nCollapseTranslateY = x[x.length-1].slice(0, -1)
+    const nCollapseOpacity = navbarCollapse.css("opacity")
+    
+    const isNavbarCollapsed = nCollapseTranslateY == 0 && nCollapseOpacity == 0
+    if (isNavbarCollapsed) { // check whether #navbarCollapse is shown/hidden
+      navbarCollapse.css({ transform: "translateY(100vh)", opacity: 1 })
+      navToggle.text("✕")
+    } else {
+      navbarCollapse.css({ transform: "translateY(0)", opacity: 0 })
+      navToggle.text("☰")
+    }
+  }
+  render() {
+    let { onNavToggleClick } = this
+    return (
+      <HeaderView onNavToggleClick={onNavToggleClick} />
+    )
+  }
+}
   
-export default Header
+// export default Header

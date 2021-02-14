@@ -57,7 +57,7 @@ const Card = ({ id, title, copy, img, cardClassName, cardStyle }) => (
         style={{ background: `center center / cover no-repeat url(${img})` }}
       />
     </div>
-    <div className="card-content position-absolute p-3 w-100 h-100 text-center d-flex flex-column align-items-center justify-content-center">
+    <div className="card-content overflow-hidden position-absolute p-3 w-100 h-100 text-center d-flex flex-column align-items-center justify-content-center">
       <h3 className=""><small>{title}</small></h3>
       <p className="">{copy}</p>
       <button href="/" className="px-3 py-1 mr-2">

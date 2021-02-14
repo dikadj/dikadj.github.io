@@ -43,27 +43,28 @@ header a, #welcome-section a {
     font-weight: normal;
     font-style: normal;
 }
-#projects {
+#projects, #blog-posts {
     h1 {
         font-family: 'Helvetica Neue';
         font-weight: 900;
         font-style: normal;
     }
-    h3 {
+    h3, p, span {
         font-family: 'Minion Pro';
         font-weight: bold;
         font-style: normal;
-    }
-    p {
-        font-family: 'Minion Pro';
-        font-weight: normal;
-        font-style: normal;    
     }
 }
 
 html, body {
     display: block;
     margin: 0;
+    #blog-posts {
+        .blog-post-header {
+            background: hsl(0,0%,15%);
+            color: hsl(0,0%,88%);    
+        }
+    }
 }
 
 // BUTTONS  

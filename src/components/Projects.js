@@ -12,7 +12,7 @@ const Projects = () => (
           {/* <div className="project-tile">
             <a href="https://dikadj.github.io/converse-landing-redesign/">Link to a project</a>
           </div> */}
-          <div className="col-12 col-md-9">
+          <div className="project-tiles col-12 col-md-9">
             <div className="row">
               <ProjectTiles className="project-tile" /> {/* will pass class to each tile */}
             </div>

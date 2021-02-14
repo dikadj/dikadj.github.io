@@ -3,18 +3,23 @@
     // height: 50px;
 }
 #navbarVisible {
-
+    
 }
 #navbarCollapse {
-    top: -100vh;
+    top: -100vh; // move #navvbarCollapse off screen
     opacity: 0;
     transform: translateY(0px);
-    // transform: translateY(-100vh); // move #navvbarCollapse off screen
-    height: calc(100vh - 58px);
+    height: 100vh;
     transition: all 426ms cubic-bezier(.4,.9,.3,1);
 }
 header {
     z-index: 9999; // to put header on top of everything
+    #navbarVisible {
+        z-index: 2;
+    }
+    #navbarCollapse {
+        z-index: 1;
+    }
     a {
         color: #fff;
     }
