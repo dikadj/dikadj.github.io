@@ -125,17 +125,22 @@ const blogPosts = [
 const slugs = blogPosts.map(item => convertToSlug(item.title))
 
 const BlogPosts = () => (
-  <section id="blog-posts" className="">
+  <section id="blog-posts" className="d-flex flex-column">
     <div className="blog-post-header">
       <h1 className="p-4 text-center text-uppercase"><small>Find out what's going on in the digital world</small></h1>
     </div>
-    <Masonry className="blog-post-tiles masonry">
+    <Masonry className="blog-post-tiles masonry align-self-center col-12 col-md-10 col-lg-9">
         {blogPosts.map(post=> (
             <div className="article p-4 col-12 col-md-4 col-lg-3">
                 <h3>{post.title}</h3>
-                <div><span className=""><small>By {post.author} | {post.published}</small></span></div>
+                <div><span className=""><small>By <em>{post.author}</em> | {post.published}</small></span></div>
+                <hr />
                 <p>{post.text}</p>
-                <div>https://dikadj.github.io/{slugs[post.id]}</div>
+                <div className="">
+                    <a className="a-button-blue-bordered px-2 py-1"
+                        href={`https://dikadj.github.io/blog/${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}/${slugs[post.id]}`}
+                    >Read Full Article</a>
+                </div>
             </div>
         ))}
     </Masonry>

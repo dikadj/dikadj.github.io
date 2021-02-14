@@ -43,7 +43,7 @@ header a, #welcome-section a {
     font-weight: normal;
     font-style: normal;
 }
-#projects, #blog-posts {
+#projects, #blog-posts, #photos {
     h1 {
         font-family: 'Helvetica Neue';
         font-weight: 900;
@@ -75,6 +75,20 @@ html, body {
     &:hover, &:focus {
       background: hsl(0,0,100%)!important;
       color: hsl(230,60,60%)!important;
+      transition: all 426ms cubic-bezier(.4,.9,.3,1);
+    }
+}
+
+.a-button-blue-bordered {
+    text-decoration: none;
+    background: hsl(230,60,60%);
+    color: hsl(0,0,100%);
+    border: solid 1px hsl(230,60,60%);
+    transition: all 426ms cubic-bezier(.4,.9,.3,1);
+    &:hover, &:focus {
+      background: hsl(0,0,100%)!important;
+      color: hsl(230,60,60%)!important;
+      border: solid 1px hsl(230,60,60%);
       transition: all 426ms cubic-bezier(.4,.9,.3,1);
     }
 }
