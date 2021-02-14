@@ -1,17 +1,9 @@
 import React from "react"
-import $ from "jquery"
-import Masonry from "masonry-layout"
+// import $ from "jquery"
+import Masonry from "react-masonry-component"
+// import Masonry from "masonry-layout"
+// import Macy from "macy"
 import "./BlogPosts.scss"
-
-$(document).ready(() => {
-    $(".masonry").removeClass("d-flex") // BUG: initial masonry won't activate without this
-    var msnry = new Masonry( ".masonry", {
-        // options
-        // itemSelector: '.grid-item',
-        // columnWidth: 200
-    })
-})
-
 
 // Convert text to slug (for url)
 const convertToSlug = text => text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'')
@@ -137,18 +129,16 @@ const BlogPosts = () => (
     <div className="blog-post-header">
       <h1 className="p-4 text-center text-uppercase"><small>Find out what's going on in the digital world</small></h1>
     </div>
-    <div className="blog-post-tiles masonry d-flex"> {/* d-flex class removed on load */}
+    <Masonry className="blog-post-tiles masonry">
         {blogPosts.map(post=> (
             <div className="article p-4 col-12 col-md-4 col-lg-3">
-                <div className="" >
-                    <h3>{post.title}</h3>
-                    <div><span className=""><small>By {post.author} | {post.published}</small></span></div>
-                    <p>{post.text}</p>
-                    <div>https://dikadj.github.io/{slugs[post.id]}</div>
-                </div>
+                <h3>{post.title}</h3>
+                <div><span className=""><small>By {post.author} | {post.published}</small></span></div>
+                <p>{post.text}</p>
+                <div>https://dikadj.github.io/{slugs[post.id]}</div>
             </div>
         ))}
-    </div>
+    </Masonry>
   </section>
 )
 

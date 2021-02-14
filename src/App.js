@@ -143,7 +143,7 @@ const App = () => (
     <Projects />
     <BlogPosts />
     {/* <Photos /> */}
-    <Footer />
+    {/* <Footer /> */}
 
     {/* END CONTENT HERE */}
 

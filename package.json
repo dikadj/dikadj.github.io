@@ -12,12 +12,12 @@
     "babel-eslint": "^10.1.0",
     "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
-    "masonry-layout": "^4.2.2",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
+    "react-masonry-component": "^6.2.1",
     "react-scripts": "4.0.0",
     "responsive-nav": "^1.0.39",
     "web-vitals": "^0.2.4"
