@@ -24,21 +24,21 @@ const items = [
       "https://images.unsplash.com/photo-1490596541415-5afadbfbbf02?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80"
   },
   {
-    id: 4,
+    id: 3,
     title: "Milky Way",
     copy: "Silhouette of mountain under starry night",
     img:
       "https://images.unsplash.com/photo-1611145485693-0be21aacd212?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
   },
   {
-    id: 5,
+    id: 4,
     title: "Western Cape",
     copy: "Silhouette of mountain near body of water",
     img:
       "https://images.unsplash.com/photo-1490596541415-5afadbfbbf02?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80"
   },
   {
-    id: 3,
+    id: 5,
     title: "SpaceX Satellite",
     copy: "A space satellite hovering above the coastline",
     img:
