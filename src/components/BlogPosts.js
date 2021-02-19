@@ -131,8 +131,14 @@ const BlogPosts = () => (
     </div>
     <Masonry className="blog-post-tiles masonry align-self-center col-12 col-md-10 col-lg-9">
         {blogPosts.map(post=> (
-            <div className="article p-4 col-12 col-md-4 col-lg-3">
-                <h3>{post.title}</h3>
+            <div className="article p-4 col-12 col-md-4 col-lg-3 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1593007791459-4b05e1158229?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    width="100%" height="auto"
+                    className="py-2"
+                />
+                <h3><a href={`https://dikadj.github.io/blog/${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}/${slugs[post.id]}`}>
+                    {post.title}
+                </a></h3>
                 <div><span className=""><small>By <em>{post.author}</em> | {post.published}</small></span></div>
                 <hr />
                 <p>{post.text}</p>

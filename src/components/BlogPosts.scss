@@ -1,4 +1,8 @@
 #blog-posts {
+    .article h3 a {
+        text-decoration: none;
+        color: hsl(0,0%,15%);
+    }
     .blog-post-header {
         background: hsl(0,0%,15%);
         color: hsl(0,0%,88%);    
