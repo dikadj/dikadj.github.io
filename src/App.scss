@@ -43,7 +43,11 @@ header a, #welcome-section a {
     font-weight: normal;
     font-style: normal;
 }
-#projects, #blog-posts, #photos {
+#projects, 
+#blog-posts, 
+#photos,
+#newsletter,
+#contact {
     h1 {
         font-family: 'Helvetica Neue';
         font-weight: 900;
@@ -54,7 +58,7 @@ header a, #welcome-section a {
         font-weight: bold;
         font-style: normal;
     }
-    p, span {
+    p, span, input {
         font-family: 'Minion Pro';
         font-weight: normal;
         font-style: normal;
@@ -64,6 +68,19 @@ header a, #welcome-section a {
 html, body {
     display: block;
     margin: 0;
+    #contact {
+        a, button {
+            // to remove button's default style
+            text-decoration: none;
+            background: none;
+            border: none;
+            // =============
+            color: hsl(0,0%,88%)!important;
+            &:hover, &:focus {
+                color: hsl(230,60,60%)!important;
+            }
+        }
+    }
 }
 
 // BUTTONS  
@@ -71,6 +88,7 @@ html, body {
     text-decoration: none;
     background: hsl(230,60,60%);
     color: hsl(0,0,100%);
+    border: none;
     transition: all 426ms cubic-bezier(.4,.9,.3,1);
     &:hover, &:focus {
       background: hsl(0,0,100%)!important;

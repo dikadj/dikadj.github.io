@@ -92,7 +92,7 @@ const photos = [
 const Photos = () => (
     <section id="photos" className="d-flex flex-column">
         <div className="photos-header my-1">
-          <h1 className="p-4 text-center text-uppercase"><small>Captured On My Lense</small></h1>
+          <h1 className="p-4 text-center text-uppercase"><small>Captured On My Lenses</small></h1>
         </div>
         <Masonry id="" className="photo-tiles masonry align-self-center col-12 col-md-10 col-lg-9">
             {photos.map(p=>(
