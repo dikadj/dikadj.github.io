@@ -4,11 +4,11 @@ import "./Footer.scss"
 
 const Footer = () => (
     <footer className="d-flex flex-column flex-md-row flex-wrap">
-      <div id="newsletter" className="d-flex flex-column col-12 col-md-6 align-items-center justify-content-center"
+      <div id="newsletter" className="d-flex flex-column px-3 col-12 col-md-6 align-items-center justify-content-center"
         style={{ background: "hsl(0,0%,50%)", height: "300px" }}
       >
         <h1 className="text-uppercase">Like what you see?</h1>
-        <p>Kindly subscribe to see more of the good stuff from the web</p>      
+        <p className="text-center">Kindly subscribe to see more of the good stuff from the web</p>      
         <form id="newsletter-form" className="d-flex flex-column flex-md-row"
           action="https://www.freecodecamp.com/email-submit" method="POST"
         >
