@@ -274,13 +274,18 @@ const GridItem = ({ className, wrapperStyle, itemStyle, text, textStyle, onMouse
 );
 
 const Home = () => {
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+  let biggerIcon
+  if (vw < 768) {
+    biggerIcon = "display-4"
+  }
   return (
       <div className="row">
         <div className="d-flex align-items-center justify-content-center justify-content-md-end col-12 col-md-4"
           style={{ background: "" }}
         >
           <div className="" style={{ color: "#dbdbdb" }}>
-            <h2 className="pt-5"
+            <h2 className="pt-5 text-center text-md-left"
               style={{ 
                 fontFamily: "dancing_scriptregular",
                 fontWeight: "normal",
@@ -307,10 +312,10 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="d-flex align-items-center justify-content-start col-12 col-md-4"
+        <div className="d-flex align-items-center justify-content-center justify-content-md-start col-12 col-md-4 mb-3 mb-md-0"
           style={{ background: "", overflowX: "hidden" }}
         >
-          <h2 className="pt-5"
+          <h2 className={`pt-5 text-center text-md-left ${biggerIcon}`}
             style={{ 
               color: "#dbdbdb",  
               fontFamily: "dancing_scriptregular",
@@ -318,30 +323,17 @@ const Home = () => {
               fontStyle: "normal",
             }}
           >
-            <a href="https://behance.net/dikadj" style={{ color: "#dbdbdb" }}>
-              <AiFillBehanceCircle 
-                style={{ 
-                  filter: "drop-shadow(5px 5px 10px black)" 
-                }} 
-              />
-            </a> <a href="https://github.com/dikadj" style={{ color: "#dbdbdb" }}>
-              <AiFillGithub 
-                style={{ 
-                  filter: "drop-shadow(5px 5px 10px black)" 
-                }} 
-              />
-            </a> <a href="https://dribbble.com/dikadj" style={{ color: "#dbdbdb" }}>
-              <AiFillDribbbleCircle 
-                style={{ 
-                  filter: "drop-shadow(5px 5px 10px black)" 
-                }} 
-              />
-            </a> <a href="https://twitter.com/dikadj" style={{ color: "#dbdbdb" }}>
-              <AiFillTwitterCircle 
-                style={{ 
-                  filter: "drop-shadow(5px 5px 10px black)" 
-                }} 
-              />
+            <a href="https://behance.net/dikadj" style={{ color: "#dbdbdb" }} className="mx-1">
+              <AiFillBehanceCircle style={{ filter: "drop-shadow(5px 5px 10px black)" }} />
+            </a>
+            <a href="https://github.com/dikadj" style={{ color: "#dbdbdb" }} className="mx-1">
+              <AiFillGithub style={{ filter: "drop-shadow(5px 5px 10px black)" }} />
+            </a>
+            <a href="https://dribbble.com/dikadj" style={{ color: "#dbdbdb" }} className="mx-1"> 
+              <AiFillDribbbleCircle style={{ filter: "drop-shadow(5px 5px 10px black)" }} />
+            </a>
+            <a href="https://twitter.com/dikadj" style={{ color: "#dbdbdb" }} className="mx-1">
+              <AiFillTwitterCircle style={{ filter: "drop-shadow(5px 5px 10px black)" }} />
             </a>
           </h2>
         </div>
