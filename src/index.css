@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'dancing_scriptregular';
+  src: url('./fonts/dancingscript-variablefont_wght-webfont.woff2') format('woff2'),
+       url('./fonts/dancingscript-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  background: linear-gradient(0deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.3) 100%), url('./assets/wooden-bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
