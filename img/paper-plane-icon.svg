@@ -1,0 +1,14 @@
+<svg width="58" height="48" viewBox="0 0 58 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(241,40,39);stop-opacity:1" />
+            <stop offset="20%" style="stop-color:rgb(243,145,28);stop-opacity:1" />
+            <stop offset="40%" style="stop-color:rgb(243,228,23);stop-opacity:1" />
+            <stop offset="60%" style="stop-color:rgb(92,194,217);stop-opacity:1" />
+            <stop offset="80%" style="stop-color:rgb(166,41,145);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(177,0,224);stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <path d="M32.2459 47.6891L23.109 38.9977L13.7216 47.4757C13.5128 47.7031 13.2158 47.8423 12.8863 47.8423C12.2599 47.8423 11.7541 47.3365 11.7541 46.71V28.1996L0.352662 17.3597C-0.102095 16.9281 -0.116016 16.2135 0.310899 15.7588C0.45475 15.6056 0.635724 15.5035 0.82598 15.4478L55.5824 0.0418169C56.1856 -0.125236 56.8074 0.222791 56.9791 0.82604C57.0673 1.1323 57.0162 1.44785 56.8677 1.70307L34.0371 47.3736C33.7587 47.9304 33.0812 48.1578 32.5244 47.8794C32.4176 47.8284 32.3248 47.7634 32.2459 47.6891ZM21.4664 37.4386L14.0186 30.3574V44.1671L21.4664 37.4386ZM13.0626 26.3249L48.478 4.39448L3.35034 17.0905L13.0626 26.3249ZM53.0998 4.19031L14.7517 27.9304L32.696 44.9977L53.0998 4.19031Z" fill="url(#rainbow-gradient)"/>
+</svg>
